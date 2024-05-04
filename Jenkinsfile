@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build image') {
             steps {
-                sh 'docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} ./python-app'
+                sh 'docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} .'
             }
         }
         stage("Docker login"){
